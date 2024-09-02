@@ -1,3 +1,10 @@
+#Folder with documents used for testing
 /assets
 
+#All Pycache folders
 **/__pycache__
+
+#Virtual environment common names - if choosing a different name, make sure you git-ignore it
+/.venv
+venv
+/myenv
