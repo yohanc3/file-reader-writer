@@ -2,7 +2,6 @@ import inquirer
 from read_from_file import read_from_file
 from write_to_file import write_to_file_nano
 from config import ABS_DIRNAME
-import subprocess
 
 option_1 = "Write into a file"
 option_2 = (
