@@ -1,3 +1,7 @@
+# The what
+
+File reader and writer. NOT tested on Windows OS yet (but I think it works)
+
 # How to run
 
 1.- Initiate a virutal environment and install the requirements from requirements.txt
