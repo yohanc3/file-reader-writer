@@ -13,6 +13,12 @@ class FileInfo:
 
     Methods:
         __repr__(): Returns a string representation of the file, combining its name and path.
+                    If FileInfo is printed out, the __repr__ method is called. If it does not
+                    exist, the memory location of the object is printed out instead.
+                    Docs: https://docs.python.org/3/library/functions.html#repr
+        __init__(): Initializes the class. Accepts arguments that can be attached to the
+                    class itself.
+                    Docs: https://docs.python.org/3/tutorial/classes.html#class-objects
     """
 
     def __init__(self, path: str, name: str):

@@ -30,12 +30,14 @@ def read_from_file(ABS_DIRNAME: str):
 
     with open(requested_file_path, "r") as f:
         if not is_file_too_big:
+
+            #Split the file path by "/"s and grab the last one (the file title)
+            print(Fore.CYAN + f"File name: {requested_file_path.split("/")[-1]}" + "\n\n")
             print(Fore.CYAN + f.read() + "\n")
 
         lines = []
-        line = f.readline()
 
-        while len(line) > 0:
+        while line := f.readline():
 
             if len(lines) >= 5:
                 for line in lines:
@@ -50,7 +52,9 @@ def read_from_file(ABS_DIRNAME: str):
 
                 lines = []
 
+                # If len(lines) > 5, we want to read another line at the end.
+                #  Otherwise the last read line will be pushed to lines
+                line = f.readline()
+
             if repr("\n") != repr(line):
                 lines.append(line)
-
-            line = f.readline()
