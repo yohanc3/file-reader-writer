@@ -17,7 +17,6 @@ def write_to_file(ABS_DIRNAME: str):
 
     See also:
         subprocess.run: Allows to run commands in the CML
-        nano: Command line text editor
         inquirer: For user prompts Inquirer is being used.
                   Docs: https://python-inquirer.readthedocs.io/en/latest/
     """
@@ -44,6 +43,19 @@ def write_to_file(ABS_DIRNAME: str):
 
 
 def _edit_file(ABS_DIRNAME: str):
+    """
+    Allows the user to pick a file from the absolute directory name of the project and opens it on nano.
+
+    Args:
+        ABS_DIRNAME (str): absolute directory name where all files are pulled from.
+
+    See also:
+        subprocess.run: Allows to run commands in the CML
+                        Docs: https://docs.python.org/3/library/subprocess.html#subprocess.run
+        nano: Command line text editor - here it's being used to edit a file right after its creationg
+              Docs: https://www.nano-editor.org/docs.php
+    """
+
     file_path = prompt_file_selection("What file do you want to edit? ", ABS_DIRNAME)
 
     subprocess.run(
@@ -64,8 +76,9 @@ def _create_and_edit_file():
     See also:
         subprocess.run: Allows to run commands in the CML
         nano: Command line text editor - here it's being used to edit a file right after its creationg
+              Docs: https://www.nano-editor.org/docs.php
         colorama: Used to accentuate certain lines in the terminal
-                  docs: https://pypi.org/project/colorama/
+                  Docs: https://pypi.org/project/colorama/
         inquirer: For user prompts Inquirer is being used.
                   Docs: https://python-inquirer.readthedocs.io/en/latest/
     """
