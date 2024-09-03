@@ -8,7 +8,7 @@ source bin/myenv/activate
 pip3 install -r requirements.txt
 ```
 
-2.- Run
+2.- Run main.py
 
 ```sh
 python3 main.py
