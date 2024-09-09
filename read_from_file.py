@@ -31,8 +31,10 @@ def read_from_file(ABS_DIRNAME: str):
     with open(requested_file_path, "r") as f:
         if not is_file_too_big:
 
-            #Split the file path by "/"s and grab the last one (the file title)
-            print(Fore.CYAN + f"File name: {requested_file_path.split("/")[-1]}" + "\n\n")
+            file_name = requested_file_path.split("/")[-1]
+
+            # Split the file path by "/"s and grab the last one (the file title)
+            print(Fore.CYAN + f"File name: {file_name}" + "\n\n")
             print(Fore.CYAN + f.read() + "\n")
 
         lines = []

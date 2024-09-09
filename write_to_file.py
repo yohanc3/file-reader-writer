@@ -11,7 +11,7 @@ PROMPT_KEY = "prompt_response"
 def write_to_file(ABS_DIRNAME: str):
     """
     Opens a user-selected file in the Nano editor for editing.
-
+`
     Args:
         ABS_DIRNAME (str): Absolute directory path where files are located.
 
